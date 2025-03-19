@@ -35,8 +35,6 @@ function init() {
 	'use strict';
 	document.getElementById('theForm').onsubmit = calculate;
 
-	return false;
-
 } // End of init() function.
 
 // Adds an event listener when the window has loaded
