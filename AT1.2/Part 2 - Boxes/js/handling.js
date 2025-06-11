@@ -4,8 +4,9 @@
 
 
 
-functio ??() {//Last button function here
-alert("Don't forget to use strict in Function Name here");
+function button2() {//Last button function here
+    'use strict';
+
 }
 
 
@@ -20,13 +21,13 @@ alert("Don't forget to use strict in Function Name here");
 
 
 
-foutncin() {//Fisrt button function here
-alert("Don't forget to use strict in Function Name here");
+function button1() {//Fisrt button function here
+    'use strict';
 }
 
 function init(){
-alert("Don't forget to use strict in init function");
-
+    'use strict';
+    
 
 // All event listeners here
 
