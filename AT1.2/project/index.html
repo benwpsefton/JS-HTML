@@ -1,16 +1,14 @@
-<!-- Make sure this validates -->
-<!-- There are multiple errors here -->
-<!DOCTYPE hmtl>
-<html lang="">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta>
-	<title>2 Boxes - Ben Sefton AT1.2</title>
-	<link rel="stylesheet" type="text/css" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2 Boxes - Ben Sefton AT1.2</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <div id="outer">
-<h2>Boxes</h2>
+<h1>Boxes</h1>
   <form id="myForm">
     <fieldset>
       <label>Blue box sits inside the red box</label>
@@ -18,11 +16,11 @@
     </fieldset>
     <fieldset>
       <label>Blue box sits under the red box</label>
-	  <button type="butto" id="btn2">Click</button></li>
+	  <button type="button" id="btn2">Click</button>
     </fieldset>
     <fieldset>
       <label>Blue box sits to the right of the red box</label>
-	  <button type="utton" id="btn3">Click</button>
+	  <button type="button" id="btn3">Click</button>
     </fieldset>
     <fieldset>
       <label>Red box sits to the left of the blue box</label>
@@ -30,23 +28,23 @@
     </fieldset>
     <fieldset>
       <label>Blue box sits inside the red box and move the blue box 20px down and 45 pixels to the right of the top left hand corner of the red box</label>
-	  <button type="buton" id="btn5">Click</button>
+	  <button type="button" id="btn5">Click</button>
     </fieldset>
     <fieldset>
       <label>Green box around both the blue and red boxes</label>
-	  <button type="btton" id="btn6">Click</button>
+	  <button type="button" id="btn6">Click</button>
     </fieldset>
   </form>
   <!-- No need to edit this below -------------- -->
   <section id="boxes">
-    <div id="green" class="hidden">
-		<div id="red" >
-		<div id="blueIn" class="hidden"></div></div>
-    	<div id="blueBottom" class="hidden"></div>
+    <div id="container">
+      <div id="red">
+        <div id="blueIn" class="hidden"></div></div>
+      <div id="blueBottom" class="hidden"></div>
     </div>
   </section>
   <!-- Finish - No need to edit this above ----- -->
 </div>
-<script type="text/javascript" src="js/handling.js"></script>
+<script src="js/handling.js"></script>
 </body>
 </html>
