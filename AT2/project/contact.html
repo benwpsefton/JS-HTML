@@ -7,65 +7,70 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header class="site-header">
-      <div class="container">
-        <h1 class="site-title">Ben Sefton</h1>
-        <nav class="site-nav">
-          <a href="index.html">Home</a>
-          <a href="projects.html">Projects</a>
-          <a href="contact.html">Contact</a>
-        </nav>
+    <header>
+      <div class="container nav">
+        <div class="nav-header">
+          <h1>Ben Sefton</h1>
+        </div>
+
+        <ul class="navbar">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
       </div>
     </header>
 
-    <main class="container">
-      <h2>Contact Me</h2>
-
-      <!-- CONTACT FORM -->
-      <form id="contactForm" novalidate>
-        <div class="field">
-          <label for="name">Full name</label>
-          <input id="name" name="name" type="text" autocomplete="name" />
-        </div>
-
-        <div class="field">
-          <label for="email">
-            Email
-            <span class="tip-icon" data-tooltip="emailTooltip">?
-              <span class="tooltip" id="emailTooltip">Use an address like name@example.com</span>
-            </span>
-          </label>
-          <input id="email" name="email" type="text" autocomplete="email">
-        </div>
-
-        <div class="field">
-          <label for="reason">Reason for contact</label>
-          <select id="reason" name="reason">
-            <option value="">-- Select --</option>
-            <option value="hire">Hiring</option>
-            <option value="project">Project collaboration</option>
-            <option value="feedback">Site feedback</option>
-            <option value="other">Other</option>
-          </select>
-        </div>
-
-        <div id="otherField" class="field" style="display: none">
-          <label for="otherReason">If other, please specify</label>
-          <input id="otherReason" name="otherReason" type="text" />
-        </div>
-
-        <div class="field">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="6"></textarea>
-        </div>
-
-        <div class="field">
-          <button id="submitBtn" type="submit">Send message</button>
-        </div>
-
-        <div id="formResult" class="hidden" aria-live="polite"></div>
-      </form>
-      <!-- END CONTACT FORM -->
+    <main>
+      <div class="wrapper">
+        <h2>Contact Me</h2>
+  
+        <!-- CONTACT FORM -->
+        <form id="contactForm" novalidate>
+          <div class="field">
+            <label for="name">Full name</label>
+            <input id="name" name="name" type="text" autocomplete="name" />
+          </div>
+  
+          <div class="field">
+            <label for="email">
+              Email
+              <span class="tip-icon" data-tooltip="emailTooltip">?
+                <span class="tooltip" id="emailTooltip">Use an address like name@example.com</span>
+              </span>
+            </label>
+            <input id="email" name="email" type="text" autocomplete="email">
+          </div>
+  
+          <div class="field">
+            <label for="reason">Reason for contact</label>
+            <select id="reason" name="reason">
+              <option value="">-- Select --</option>
+              <option value="hire">Hiring</option>
+              <option value="project">Project collaboration</option>
+              <option value="feedback">Site feedback</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+  
+          <div id="otherField" class="field" style="display: none">
+            <label for="otherReason">If other, please specify</label>
+            <input id="otherReason" name="otherReason" type="text" />
+          </div>
+  
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6"></textarea>
+          </div>
+  
+          <div class="field">
+            <button id="submitBtn" type="submit">Send message</button>
+          </div>
+  
+          <div id="formResult" class="hidden" aria-live="polite"></div>
+        </form>
+        <!-- END CONTACT FORM -->
+      </div>
     </main>
 
     <footer class="site-footer">

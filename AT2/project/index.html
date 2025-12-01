@@ -7,40 +7,60 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header class="site-header">
-      <div class="container">
-        <h1 class="site-title">Ben Sefton</h1>
-        <nav class="site-nav">
-          <a href="index.html">Home</a>
-          <a href="projects.html">Projects</a>
-          <a href="contact.html">Contact</a>
-        </nav>
+    <header>
+      <div class="nav-container">
+        <div class="navbar">
+          <div class="nav-header">
+            <h1>Ben Sefton</h1>
+          </div>
+          <nav class="nav">
+            <ul class="nav-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </header>
 
-    <main class="container">
-      <section>
-        <h2>Welcome</h2>
-        <p>
-          Hi — I'm Jane, a web developer. This is a small portfolio built for
-          the ICTWEB assessment.
-        </p>
-        <p><a class="button" href="contact.html">Contact me</a></p>
-      </section>
-
-      <section>
-        <h2>Featured</h2>
-        <article class="project">
-          <h3>Project A</h3>
+    <main>
+      <div class="wrapper">
+        <div class="container">
+          <h2>Welcome</h2>
           <p>
-            Short description of a project. Link to a live demo or repo would go
-            here.
+            Hi — I'm Ben, a web developer. This is a small portfolio built for
+            the JavaScript and HTML assessment 2.
           </p>
-        </article>
-      </section>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <div class="container">
+              <h2>Get in Touch</h2>
+              <p>
+                If you would like to get in contact with me, please use the button below!
+              </p>
+              <a class="button" href="contact.html">Contact me</a>
+            </div>
+          </div>
+  
+          <div class="col">
+            <div class="container">
+              <h2>Featured</h2>
+              <a href="https://benwpsefton.github.io/my-react-app/" target="_blank" class="card">
+                <div>
+                  <h4>One Ring Rentals - React App</h4>
+                  <p>This is a fully-functioning placeholder web app built in React. It is designed for a rental company, and serves to showcase their available properties.</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
 
-    <footer class="site-footer">
+    <footer>
       <div class="container">
         <small>© 2025 Ben Sefton</small>
       </div>
