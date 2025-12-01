@@ -1,0 +1,142 @@
+:root {
+  --max-w: 900px;
+  --accent: #2a7ae2;
+  --muted: #666;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  color: #222;
+  background: #f7f7f7;
+  line-height: 1.45;
+}
+
+.container {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 1rem;
+  background: white;
+}
+
+.site-header,
+.site-footer {
+  background: #fff;
+  border-bottom: 1px solid #eee;
+}
+
+.site-title {
+  margin: 0;
+  display: inline-block;
+}
+
+.site-nav {
+  float: right;
+}
+
+.site-nav a {
+  margin-left: 1rem;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+}
+
+.field {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.field label {
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+input[type="text"],
+textarea,
+select {
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+button {
+  padding: 0.6rem 0.9rem;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.tip-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  border-radius: 50%;
+  background: #eee;
+  border: 1px solid #bbb;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.85rem;
+  position: relative;
+  margin-left: 4px;
+}
+
+.tooltip {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translateY(-50%);
+  margin-left: 4px;
+  background: #333;
+  color: #fff;
+  padding: 6px 8px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 10;
+}
+
+.tooltip.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.hidden {
+  display: none;
+}
+
+#formResult {
+  margin-top: 1rem;
+  padding: 0.7rem;
+  border-radius: 4px;
+}
