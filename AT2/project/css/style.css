@@ -1,6 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 /* === GLOBALS === */
 :root {
-  --accent: #2a7ae2;
+  --text-light: #ffffff;
+  --text-dark: #665A48;
+  --primary-color: #A0937D; /*header/footer */
+  --secondary-color: #c1b9aa;
+  --tertiary-color: #F6E6CB;
+  --accent: #B6C7AA; /*card accent and buttons */
+  --bg-light: #fefefa;
   --muted: #666;
 }
 
@@ -9,66 +17,18 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
   margin: 0;
-  color: #222;
-  background: #f7f7f7;
+  min-height: 100vh;
   line-height: 1.45;
-}
 
-main {
+  font-family: 'Roboto', sans-serif;
+  color: var(--text-dark);
+  background: var(--bg-light);
+
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
-a {
-  text-decoration: none;
-  color: #222;
-}
-
-.container {
-  margin: 0;
-  padding: 1rem;
-
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
-
-  text-align: center;
-
-  height: 100%;
-}
-
-.wrapper {
-  max-width: 900px;
-  padding: 1rem;
-  margin: 0;
-
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: center;
-  align-items: center;
-}
-
-.wrapper > * {
-  flex: 1 100%;
-}
-
-.row {
-  display: flex;
-  justify-content: space-between;
-  gap: 80px;
-}
-
-.col {
-  flex: 50%;
-  max-width: 450px;
-  background-color: #fff;
-  height: 30vh;
-}
 
 h1,
 h2,
@@ -78,163 +38,318 @@ p {
   margin: 0;
 }
 
-button {
-  padding: 0.6rem 0.9rem;
-  background: var(--accent);
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-
-  margin: 0;
-}
-
-.button {
-  display: inline-block;
-  padding: 0.4rem 0.8rem;
-  background: var(--accent);
-  color: #fff;
-  border-radius: 4px;
+a {
   text-decoration: none;
+  color: var(--text-dark);
 }
 
-.hidden {
-  display: none;
+.text-light {
+  color: var(--text-light);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-  border-radius: 25px;
-  transition: transform 0.3s ease;
-  display: block;
-  padding: 1.5rem;
-  margin: 0;
+/* === MAIN LAYOUT === */
+main {
+  text-align: center;
+  min-height: calc(100vh - 70px - 60px);
+  
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.card:hover {
-  transform: scale(1.05);
+.wrapper {
+  width: 100%;
+  max-width: 1000px;
+  padding: 2rem 1rem;
+  margin: auto;
+  gap: 2.5rem;
+
+  display: flex;
+  flex-direction: column;
 }
 
-header,
-footer {
-  background: #fff;
-  border-bottom: 1px solid #eee;
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content-container {
+  gap: 12px;
+  
+  display: flex;
+  flex-direction: column;
+}
+
+/* === ROW AND COLUMN LAYOUT === */
+.row {
+  gap: 2.5rem;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.col {
+  max-width: 440px;
+
+  flex: 1 1 320px;
+  display: flex;
+  justify-content: center;
 }
 
 /* === NAVBAR === */
 .nav-container {
-  font-size: 1.2rem;
+  height: 70px;
+
+  background: var(--primary-color);
+
+  display: flex;
+  align-items: center;
 }
 
-.nav {
+.navbar {
+  margin: auto;
+  width: 75%;
+
   display: flex;
-  flex-flow: row wrap;
   justify-content: space-between;
-  padding: 2rem;
   align-items: center;
 }
 
 .nav-header {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-
-  margin: 0;
+  font-size: 1.6rem;
+  font-weight: bold;
 }
 
 .nav-links {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-end;
+  gap: 1rem;
 
+  display: flex;
+}
+
+.nav-links li{
+  text-decoration: none;
   list-style: none;
-  margin: 0;
 }
 
 .nav-links a {
-  text-decoration: none;
-  display: block;
-  padding: 1em;
-  color: var(--accent);
+  font-weight: bold;
+
+  color: var(--text-light);
+  transition: color 0.25s ease;
 }
 
-/* === INDEX === */
-.content {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  height: 70vh;
-  align-items: center;
+.nav-links a:hover {
+  color: var(--tertiary-color);
+}
+
+/* === FOOTER === */
+footer {
+  background: var(--primary-color);
+  color: var(--text-light);
+}
+
+.footer {
+  text-align: center;
+  height: 60px;
+  padding: 1rem;
+}
+
+/* === CARDS === */
+.card {
+  position: relative;
+  text-align: center;
+  width: 100%;
+  min-height: 240px;
+  margin: 0 auto;
+  padding: 2rem 2.4rem;
+  border-radius: 22px;
+  gap: 1rem;
+
+  background: var(--bg-light);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(0,0,0,0.05);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  margin-left: 8rem;
+  align-items: center;
+}
+
+.card:hover {
+  transform: scale(1.05);
+
+  box-shadow: 0 12px 24px rgba(0,0,0,0.16);
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  border-radius: 22px 22px 0 0;
+
+  background: var(--accent);
+  opacity: 0.4;
+}
+
+.card p {
+  line-height: 1.5;
+
+  opacity: 0.85;
+}
+
+.card-button {
+  padding: 0.6rem 1.4rem;
+  border-radius: 20px;
+  font-weight: 600;
+  
+  background: var(--accent);
+  color: var(--text-dark);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.card-button:hover {
+  transform: translateY(-2px);
+
+  background: #cdd9c5;
+}
+
+/* === BUTTONS === */
+button {
+  margin-top: 1rem;
+  padding: 0.6rem 2rem;
+  border-radius: 15px;
+  font-size: 1rem;
+
+
+  background: var(--primary-color);
+  color: var(--text-light);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  border: none;
+  cursor: pointer;
+  transition: transform 0.25s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
 }
 
 /* === CONTACT FORM === */
-.field {
-  margin-bottom: 1rem;
+form {
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  margin: auto;
+  padding: 2rem 2.4rem;
+  border-radius: 22px;
+  gap: 1rem;
+
+  background: var(--bg-light);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(0,0,0,0.05);
+
   display: flex;
   flex-direction: column;
-  position: relative;
 }
 
-.field label {
-  font-weight: 600;
-  margin-bottom: 0.35rem;
+form::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  border-radius: 22px 22px 0 0;
+  
+  background: var(--accent);
+  opacity: 0.4;
+}
+
+.field {
+  text-align: left;
+  gap: 0.4rem;
+  
   display: flex;
-  align-items: center;
-  gap: 6px;
+  flex-direction: column;
 }
 
 input[type="text"],
 textarea,
 select {
+  width: 100%;
   padding: 0.6rem;
-  border: 1px solid #ccc;
-  border-radius: 4px;
   font-size: 1rem;
+  border-radius: 6px;
+
+  border: 1px solid #ccc;
+  transition: border 0.25s ease;
+}
+
+input[type="text"]:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--accent);
 }
 
 #formResult {
   margin-top: 1rem;
   padding: 0.7rem;
-  border-radius: 4px;
+  border-radius: 6px;
 }
 
-/* tooltips */
+/* === TOOLTIPS === */
 .tip-icon {
   display: inline-block;
+  position: relative;
+  text-align: center;
   width: 20px;
   height: 20px;
+  margin-left: 4px;
   line-height: 20px;
-  text-align: center;
   border-radius: 50%;
+  font-size: 0.85rem;
+  font-weight: bold;
+
   background: #eee;
   border: 1px solid #bbb;
   cursor: pointer;
-  font-weight: bold;
-  font-size: 0.85rem;
-  position: relative;
-  margin-left: 4px;
 }
 
 .tooltip {
   position: absolute;
   top: 50%;
-  left: 100%;
+  left: 110%;
   transform: translateY(-50%);
   margin-left: 4px;
-  background: #333;
-  color: #fff;
   padding: 6px 8px;
   border-radius: 4px;
   font-size: 0.85rem;
-  white-space: nowrap;
-  opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
-  z-index: 10;
+
+  background: #333;
+  color: #fff;
+  opacity: 0;
+  white-space: nowrap;
+  transition: opacity 0.25s ease;
 }
 
 .tooltip.show {
   opacity: 1;
   visibility: visible;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 700px) {
+  .row {
+    flex-direction: column;
+  }
 }

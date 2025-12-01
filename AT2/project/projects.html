@@ -8,37 +8,59 @@
   </head>
   <body>
     <header>
-      <div class="container nav">
-        <div class="nav-header">
-          <h1>Ben Sefton</h1>
+      <div class="nav-container">
+        <div class="navbar">
+          <div class="nav-header">
+            <p class="text-light">Ben Sefton</p>
+          </div>
+          <nav class="nav">
+            <ul class="nav-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="projects.html">Projects</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </nav>
         </div>
-
-        <ul class="navbar">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="projects.html">Projects</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
       </div>
     </header>
 
     <main>
       <div class="wrapper">
-        <h2>Projects</h2>
+        <div class="container">
+          <div class="content-container">
+            <h2>Projects</h2>
+            <p>These are some examples of my completed projects</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col">
+            <div class="container">
+              <a href="https://benwpsefton.github.io/my-react-app/" target="_blank" class="card">
+                <h2>React App</h2>
+                <div>
+                  <p>A fully-functioning placeholder <b>web app built in React.</b> It is designed for a rental company, and serves to showcase their available properties.</p>
+                </div>
+              </a>
+            </div>
+          </div>
   
-        <section class="project">
-          <h3>One Ring Rentals - React App</h3>
-          <p>This is a fully-functioning placeholder web app built in React. It is designed for a rental company, and serves to showcase their available properties.</p>
-        </section>
-  
-        <section class="project">
-          <h3>Project B</h3>
-          <p>Short description...</p>
-        </section>
+          <div class="col">
+            <div class="container">
+              <a href="https://sosostudio.com.au/" target="_blank" class="card">
+                <h2>SoSo Studio</h2>
+                <div>
+                  <p>This was a group project we created for a client. They are a small local business, that sells custom-designed rugs.</p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
 
     <footer>
-      <div class="container">
+      <div class="footer">
         <small>© 2025 Ben Sefton</small>
       </div>
     </footer>
