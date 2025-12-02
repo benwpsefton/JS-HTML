@@ -226,12 +226,13 @@ footer {
 button {
   margin-top: 1rem;
   padding: 0.6rem 2rem;
-  border-radius: 15px;
+  border-radius: 20px;
   font-size: 1rem;
+  font-weight: 600;
 
 
-  background: var(--primary-color);
-  color: var(--text-light);
+  background: var(--accent);
+  color: var(--text-dark);
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   border: none;
   cursor: pointer;
@@ -298,6 +299,19 @@ textarea:focus,
 select:focus {
   outline: none;
   border-color: var(--accent);
+}
+
+.error-msg {
+  color: #900;
+  font-size: 0.85rem;
+  margin-top: 0.3rem;
+  min-height: 1em;
+}
+
+.field.error input,
+.field.error textarea,
+.field.error select {
+  border-color: #900;
 }
 
 #formResult {

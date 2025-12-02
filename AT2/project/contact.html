@@ -33,6 +33,7 @@
           <div class="field">
             <label for="name">Full name</label>
             <input id="name" name="name" type="text" autocomplete="name" />
+            <div class="error-msg" aria-live="polite"></div>
           </div>
   
           <div class="field">
@@ -43,6 +44,7 @@
               </span>
             </label>
             <input id="email" name="email" type="text" autocomplete="email">
+            <div class="error-msg" aria-live="polite"></div>
           </div>
   
           <div class="field">
@@ -54,16 +56,19 @@
               <option value="feedback">Site feedback</option>
               <option value="other">Other</option>
             </select>
+            <div class="error-msg" aria-live="polite"></div>
           </div>
   
           <div id="otherField" class="field" style="display: none">
             <label for="otherReason">If other, please specify</label>
             <input id="otherReason" name="otherReason" type="text" />
+            <div class="error-msg" aria-live="polite"></div>
           </div>
   
           <div class="field">
             <label for="message">Message</label>
             <textarea id="message" name="message" rows="6"></textarea>
+            <div class="error-msg" aria-live="polite"></div>
           </div>
   
           <div class="field">
